@@ -1,0 +1,38 @@
+@model List<GuestBook.Models.GuestBook>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>Idiotic guest book</title>
+</head>
+
+<body>
+    <div>
+        <div>
+            @foreach (var item in Model)
+            {
+                <div>
+                    <h5>@item.Name</h5>
+                    <p>@item.Message</p>
+                    <hr/>
+                </div>
+            }
+        </div>
+        <div>
+            <form method="post"> 
+                <label for="Message"></label>
+                <textarea id="Message" type="text" name="Message"></textarea>
+                <br/>
+                <label for="Name"></label>
+                <input id="Name" type="text" name="Name" />
+                <br/>
+                <button type="submit">Post</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
