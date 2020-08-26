@@ -11,6 +11,7 @@ using Microsoft.EntityFrameworkCore;
 using GuestBook.Models;
 using GuestBook.Data;
 using Microsoft.Extensions.Configuration;
+using GuestBook.Controllers;
 
 namespace GuestBook
 {
@@ -28,6 +29,7 @@ namespace GuestBook
             services.AddControllersWithViews();
             services.AddDbContext<GuestBookContext>(options =>
                 options.UseSqlite(Configuration.GetConnectionString("GuestBookContext")));
+            services.AddTransient<IGuestBookService, GuestBookServiceTurbo>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

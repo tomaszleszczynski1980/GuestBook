@@ -10,7 +10,9 @@ namespace GuestBook.Models
         [StringLength(120, MinimumLength = 3)]
         public string Coment { get; set; }
         
-        // [ForeignKey()]
-        public int PostId { get; set; }
+        [ForeignKey("Owner")]
+        public int OwnerId { get; set; }
+
+        public GuestBook Owner { get; set; }
     }
 }

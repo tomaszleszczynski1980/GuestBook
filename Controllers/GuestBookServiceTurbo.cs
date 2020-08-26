@@ -3,16 +3,9 @@ using System.Collections.Generic;
 
 namespace GuestBook.Controllers
 {
-    public class GuestBookService
-    {   
-
-
-        public GuestBookService () {
-
-        }
-	
+    public class GuestBookServiceTurbo
+    {
         public List<GuestBook> GetAllEntries() {
-
         }
     }
 }

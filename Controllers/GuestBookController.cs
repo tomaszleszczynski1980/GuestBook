@@ -8,6 +8,7 @@ namespace GuestBook.Controllers
     public class GuestBookController : Controller
     {
         private readonly GuestBookContext _context;
+        private 
         
         public GuestBookController(GuestBookContext context)
         {
